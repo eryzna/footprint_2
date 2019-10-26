@@ -23,6 +23,14 @@ class ApplicationController < Sinatra::Base
       @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
     end
 
+    def balance
+      @balance= User.activities.all
+
+    end
+
+    def credits_total
+    end
+
   end
 
 end
