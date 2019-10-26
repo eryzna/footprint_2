@@ -9,4 +9,12 @@ class ActivitiesController < ApplicationController
     end
   end
 
+  get '/activities/new' do
+    if logged_in?
+      erb :'activities/create_activity'
+    else
+      redirect to '/login'
+    end
+  end
+
 end
