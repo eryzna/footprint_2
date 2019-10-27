@@ -36,6 +36,7 @@ class ActivitiesController < ApplicationController
           @activity.credits = 400
         end
         @activity.length = params[:length]
+        @activity.user = current_user
         @activity.save
         if @activity.save
           redirect to "/activities/#{@activity.id}"

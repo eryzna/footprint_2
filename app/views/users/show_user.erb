@@ -5,6 +5,11 @@
   <h4> No activities to show! Add one <a href="/activities/new"> here.</a> </h4>
 <% else %>
   <% @user.activities.each do |a| %>
-    <%= a.name %>
+    <p> Activity Name: <%= a.name.capitalize %>  </p>
+    <p> Activity Type: <%= a.activity_type.capitalize%> </p>
   <%end%>
+<%end%>
+
+<% @user.activities.each do |c| %>
+  <%= c.credits %>
 <%end%>
