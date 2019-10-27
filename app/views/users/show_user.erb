@@ -1,15 +1,15 @@
-<h1> Hello, <%= @user.username %>. Here are your stats!</h1>
+<h1> Hello, <%= @user.username %>. Here are Your Stats!</h1>
 
-
+<h2>Activities</h2>
 <% if @user.activities == [] %>
   <h4> No activities to show! Add one <a href="/activities/new"> here.</a> </h4>
 <% else %>
   <% @user.activities.each do |a| %>
-    <p> Activity Name: <%= a.name.capitalize %>  </p>
-    <p> Activity Type: <%= a.activity_type.capitalize%> </p>
+    <p> <%= a.name.capitalize %>  </p>
   <%end%>
 <%end%>
 
-<% @user.activities.each do |c| %>
-  <%= c.credits %>
-<%end%>
+
+<% a = @user.activities.map {|d| d.credits }%>
+<h2>Your Balance </h2>
+<%= a.inject(0){|sum,x| sum + x }%>

@@ -58,6 +58,37 @@ class ActivitiesController < ApplicationController
     end
   end
 
+  get '/activities/:id/edit' do
+    if logged_in?
+      @activity = Activity.find_by_id(params[:id])
+      if @activity && @activity.user == current_user
+        erb :'activities/edit_activity'
+      else
+        redirect to '/activities'
+      end
+    else
+      redirect to '/login'
+    end
+  end
+
+  patch '/activities/:id' do
+    if logged_in?
+      if params[:activity_type]== "" || params[:length]== ""
+        redirect to '/activities/#{params[:id]}/edit'
+      else
+        @activity= Activity.find_by_id(params[:id])
+        if @activity && @activity.user == current_user
+          if @activity.update(name: params[:name], activity_type: params[:activity_type], length: params[:length])
+            redirect to "/activities/#{@activity.id}"
+          else
+            redirect to "/activities/#{@activity.id}/edit"
+          end
+        end
+      end
+    else
+      redirect to '/activities'
+    end
+  end
 
 
 end
