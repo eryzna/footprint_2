@@ -1,5 +1,6 @@
 class ActivitiesController < ApplicationController
 
+
   get '/activities' do
     if logged_in?
       @activities = Activity.all
@@ -15,11 +16,9 @@ class ActivitiesController < ApplicationController
     else
       redirect to '/login'
     end
-    puts params
   end
 
   post '/activities' do
-    puts params
     if logged_in?
       if params[:activity] == ""
         redirect to "/activities/new"
@@ -57,5 +56,7 @@ class ActivitiesController < ApplicationController
       redirect to '/login'
     end
   end
+
+
 
 end

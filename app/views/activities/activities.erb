@@ -1,6 +1,10 @@
-<h1> Hello <%=@current_user.username%>! Here are your activities!</h1>
+<h1> Hello <%=@current_user.username%>!</h1>
 
-<% @activities.each do |activity| %>
-  <%= activity.name %>
-  <%= activity.length %>
-<%end%>
+  <% @activities.each do |activity| %>
+  <ul>
+      <%= activity.name %>
+      <%= activity.length %>
+  </ul>
+  <%end%>
+
+  <h4><a href="/activities/new"> Add an Activity</a></h4>

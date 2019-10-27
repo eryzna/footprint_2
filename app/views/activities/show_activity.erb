@@ -1,3 +1,6 @@
 <h1> Congrats, <%=@current_user.username%>! You <%= @activity.name.downcase %>! </h1>
 
-<p><%= @activity.activity_type</p>
+Activity Type: <%= @activity.activity_type.capitalize%> <br>
+Credits: <%= @activity.credits%>
+
+<h4><a href="/logout"> Logout</a></h4>

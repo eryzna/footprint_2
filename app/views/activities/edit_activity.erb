@@ -1,1 +1,13 @@
 <h2> Edit Activity</h2>
+
+<form class="" action="/activities/:id>" method="post">
+  <input type="hidden" id="hidden" name="_method" value="PATCH">
+  <input type="checkbox" name="activity_type" id="commute" value="commute"> <label for="commute"> Commute </label> </br>
+  <input type="checkbox" name="activity_type" id="food" value="food"> <label for="food"> Food </label> </br>
+  <input type="checkbox" name="activity_type" id="home" value="home"> <label for="home"> Home </label> </br>
+  <input type="checkbox" name="activity_type" id="outreach" value="outreach"> <label for="outreach"> Outreach </label> </br>
+
+  Length: <input type="text" name="length" value=""> </br>
+  <input type="submit" name="" value="submit">
+
+</form>
