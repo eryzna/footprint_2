@@ -13,3 +13,5 @@
 <% a = @user.activities.map {|d| d.credits }%>
 <h2>Your Balance </h2>
 <%= a.inject(0){|sum,x| sum + x }%>
+
+<h4><a href="/logout"> Logout</a> &nbsp;&nbsp; <a href="/activities/new">Add an Activity</a>

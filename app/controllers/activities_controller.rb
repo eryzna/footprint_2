@@ -78,7 +78,7 @@ class ActivitiesController < ApplicationController
       else
         @activity= Activity.find_by_id(params[:id])
         if @activity && @activity.user == current_user
-          if @activity.update(name: params[:name], activity_type: params[:activity_type], length: params[:length])
+          if @activity.update(activity_type: params[:activity_type], length: params[:length])
             redirect to "/activities/#{@activity.id}"
           else
             redirect to "/activities/#{@activity.id}/edit"
@@ -87,6 +87,18 @@ class ActivitiesController < ApplicationController
       end
     else
       redirect to '/activities'
+    end
+  end
+
+  delete '/activities/:id/delete' do
+    if logged_in?
+      @activity = Activity.find_by_id(params[:id])
+      if @activity && @activity.user == current_user
+        @activity.delete
+      end
+      redirect to '/activities'
+    else
+      redirect to '/login'
     end
   end
 
