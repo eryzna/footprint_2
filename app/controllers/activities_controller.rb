@@ -26,14 +26,15 @@ class ActivitiesController < ApplicationController
         @activity = Activity.create
         @activity.name = params[:name]
         @activity.activity_type = params[:activity_type]
+        @activity.length = params[:length]
         if @activity.activity_type== "commute"
-          @activity.credits= 100
+          @activity.credits= 10 * @activity.length
         elsif @activity.activity_type == "food"
-          @activity.credits= 200
+          @activity.credits= 20 * @activity.length
         elsif @activity.activity_type == "home"
-          @activity.credits= 300
+          @activity.credits= 30 * @activity.length
         elsif @activity.activity_type == "outreach"
-          @activity.credits = 400
+          @activity.credits = 40 * @activity.length
         end
         @activity.length = params[:length]
         @activity.user = current_user

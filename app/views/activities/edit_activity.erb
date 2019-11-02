@@ -3,15 +3,16 @@
 <form class="" action="/activities/<%=@activity.id%>" method="post">
   <input type="hidden" id="hidden" name="_method" value="PATCH">
   <h4>Activity Type</h4>
-  <input type="checkbox" name="activity_type" id="commute" value="commute"> <label for="commute"> Commute </label> </br>
-  <input type="checkbox" name="activity_type" id="food" value="food"> <label for="food"> Food </label> </br>
-  <input type="checkbox" name="activity_type" id="home" value="home"> <label for="home"> Home </label> </br>
-  <input type="checkbox" name="activity_type" id="outreach" value="outreach"> <label for="outreach"> Outreach </label> </br>
+  <input type="radio" name="activity_type" id="commute" value="commute"> <label for="commute"> Commute </label> </br>
+  <input type="radio" name="activity_type" id="food" value="food"> <label for="food"> Food </label> </br>
+  <input type="radio" name="activity_type" id="home" value="home"> <label for="home"> Home </label> </br>
+  <input type="radio" name="activity_type" id="outreach" value="outreach"> <label for="outreach"> Outreach </label> </br>
 
   <h4>Length</h4>
 
-  Length: <input type="text" name="length" value=""> </br>
+  Length (Minutes of Size): <input type="text" name="length" value=""> </br>
   <br>
-  <input type="submit" name="" value="submit">
-
+  <input type="submit" name="" value="Submit">
 </form>
+
+ <a href="/users/<%=@current_user.slug%>"> Go Back</a>

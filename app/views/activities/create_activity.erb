@@ -1,15 +1,14 @@
 <h2>Add an Activity</h2>
 <form class="" action="/activities" method="post">
-  Activity Name: <input type="text" name="name" value=""> </br>
-  Type: <input type="checkbox" name="activity_type" id="commute" value="commute"> <label for="commute"> Commute </label> </br>
-  <input type="checkbox" name="activity_type" id="food" value="food"> <label for="food"> Food </label> </br>
-  <input type="checkbox" name="activity_type" id="home" value="home"> <label for="home"> Home </label> </br>
-  <input type="checkbox" name="activity_type" id="outreach" value="outreach"> <label for="outreach"> Outreach </label> </br>
+  <h4>Activity Name: <input type="text" name="name" value=""> </br></h4>
+  <h4>Type: </h4>
+  <input type="radio" name="activity_type" id="commute" value="commute"> <label for="commute"> Commute </label> </br>
+  <input type="radio" name="activity_type" id="food" value="food"> <label for="food"> Food </label> </br>
+  <input type="radio" name="activity_type" id="home" value="home"> <label for="home"> Home </label> </br>
+  <input type="radio" name="activity_type" id="outreach" value="outreach"> <label for="outreach"> Outreach </label> </br>
 
-  Length: <input type="text" name="length" value=""> </br>
+  <h4>Length (Minutes or Size): <input type="text" name="length" value=""></h4></br>
   <input type="submit" name="submit" value="Submit">
-
-
-
-
 </form>
+
+<h4><a href="/users/<%=@current_user.slug%>"> Profile</a>&nbsp;&nbsp;<a href="/activities"> Home</a></h4>

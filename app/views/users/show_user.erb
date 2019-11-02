@@ -5,7 +5,7 @@
   <h4> No activities to show! Add one <a href="/activities/new"> here.</a> </h4>
 <% else %>
   <% @user.activities.each do |a| %>
-    <p> <%= a.name.capitalize %>  </p>
+    <li> <a href="/activities/<%=a.id%>"> <%= a.name.capitalize %> </a></li>
   <%end%>
 <%end%>
 
@@ -14,4 +14,4 @@
 <h2>Your Balance </h2>
 <%= a.inject(0){|sum,x| sum + x }%>
 
-<h4><a href="/logout"> Logout</a> &nbsp;&nbsp; <a href="/activities/new">Add an Activity</a>
+<h4><a href="/activities/new">Add an Activity</a>&nbsp;&nbsp;<a href="/activities">Home</a>&nbsp;&nbsp;<a href="/logout"> Logout</a> 
