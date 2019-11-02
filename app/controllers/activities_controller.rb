@@ -27,16 +27,7 @@ class ActivitiesController < ApplicationController
         @activity.name = params[:name]
         @activity.activity_type = params[:activity_type]
         @activity.length = params[:length]
-        if @activity.activity_type== "commute"
-          @activity.credits= 10 * @activity.length
-        elsif @activity.activity_type == "food"
-          @activity.credits= 20 * @activity.length
-        elsif @activity.activity_type == "home"
-          @activity.credits= 30 * @activity.length
-        elsif @activity.activity_type == "outreach"
-          @activity.credits = 40 * @activity.length
-        end
-        @activity.length = params[:length]
+        @activity.credits = total_credits
         @activity.user = current_user
         @activity.save
         if @activity.save
@@ -78,8 +69,13 @@ class ActivitiesController < ApplicationController
         redirect to '/activities/#{params[:id]}/edit'
       else
         @activity= Activity.find_by_id(params[:id])
+        @activity.credits=total_credits
         if @activity && @activity.user == current_user
-          if @activity.update(activity_type: params[:activity_type], length: params[:length])
+          @activity.activity_type = params[:activity_type]
+          @activity.length = params[:length]
+          @activity.credits = total_credits
+          @activity.save
+          if @activity.save
             redirect to "/activities/#{@activity.id}"
           else
             redirect to "/activities/#{@activity.id}/edit"
