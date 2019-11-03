@@ -1,4 +1,6 @@
-<h1> Congrats, <%=@current_user.username%>, for <%= @activity.name.downcase %>! </h1>
+<h1> Congrats on your activity, <%=@current_user.username%>!</h1>
+
+<h3><%=@activity.name.titleize%></h3>
 
 Activity Type: <%= @activity.activity_type.capitalize%> <br>
 Length: <%=@activity.length%> <br>

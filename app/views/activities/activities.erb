@@ -3,7 +3,7 @@
 <h3>Activities</h3>
   <% @activities.each do |activity| %>
     <% if activity.name %>
-      <li> <%= activity.name.capitalize %> </li>
+      <li> <%= activity.name.titleize %> </li>
     <%end%>
   <%end%>
 
