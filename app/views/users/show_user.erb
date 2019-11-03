@@ -2,7 +2,7 @@
 
 <h3>Activities</h3>
 <% if @user.activities == [] %>
-  <h4> No activities to show! </a> </h4>
+  <p> No activities to show! </p>
 <% else %>
   <% @user.activities.each do |a| %>
     <li> <a href="/activities/<%=a.id%>"> <%= a.name.titleize %> </a></li>
