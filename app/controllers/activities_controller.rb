@@ -23,13 +23,13 @@ class ActivitiesController < ApplicationController
       if params[:activity] == ""
         redirect to "/activities/new"
       else
-        @activity = Activity.create
-        @activity.name = params[:name]
-        @activity.activity_type = params[:activity_type]
-        @activity.length = params[:length]
-        @activity.credits = total_credits
-        @activity.user = current_user
-        @activity.save
+        @activity= current_user.activities.build ({name: params[:name], activity_type: params[:activity_type], length: params[:length], credits: total_credits})
+      #  @activity = Activity.create
+      #  @activity.name = params[:name]
+      #  @activity.activity_type = params[:activity_type]
+      #  @activity.length = params[:length]
+      #  @activity.credits = total_credits
+      #  @activity.user = current_user
         if @activity.save
           redirect to "/activities/#{@activity.id}"
         else

@@ -24,18 +24,15 @@ class ApplicationController < Sinatra::Base
     end
 
     def total_credits
-      if @activity.activity_type== "commute"
-        @activity.credits= 10 * @activity.length
-      elsif @activity.activity_type == "food"
-        @activity.credits= 20 * @activity.length
-      elsif @activity.activity_type == "home"
-        @activity.credits= 30 * @activity.length
-      elsif @activity.activity_type == "outreach"
-        @activity.credits = 40 * @activity.length
+      if params[:activity_type]== "commute"
+        params[:credits]= 10 * params[:length].to_i
+      elsif params[:activity_type] == "food"
+        params[:credits]= 20 * params[:length].to_i
+      elsif params[:activity_type] == "home"
+        params[:credits]= 30 * params[:length].to_i
+      elsif params[:activity_type] == "outreach"
+        params[:credits] = 40 * params[:length].to_i
       end
-    end
-
-    def credits_total
     end
 
   end
