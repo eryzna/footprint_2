@@ -51,3 +51,7 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
+
+.background-img {
+  background-image: url("images/green_gradient.jpeg");
+}
