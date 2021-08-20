@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<!--<link href="<%= url('/bootstrap/css/bootstrap.css') %>" rel="stylesheet" type="text/css" />
+<link href="<%= url('/bootstrap/css/bootstrap-responsive.css') %>" rel="stylesheet" type="text/css" />
 
-<link href="public/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="public/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+<!--<link href="public/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="public/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">-->
 <style>
     h1, h4 {
         font-family: sans-serif;
@@ -37,8 +40,7 @@
 </head>
 
 <body>
-<h1>Footprint </h1>
 <%= yield %>
-<script src="/js/bootstrap.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
