@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    x
     <title>Footprint</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
@@ -27,6 +26,14 @@
           font-size: 3.5rem;
         }
       }
+
+      body {
+        background: url(images/green_gradient.jpeg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
     </style>
 
     
@@ -39,7 +46,7 @@
   <header class="mb-auto">
     <div>
       <h3 class="float-md-start mb-0">Footprint</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
+      <nav class="nav nav-masthead justify-content-center float-md-end" style="padding-top: 2%">
         <a class="nav-link active" aria-current="page" href="/">Home</a>
         <a class="nav-link" href="#">Latest</a>
         <a class="nav-link" href="#">About</a>
@@ -49,7 +56,7 @@
 
   <main class="px-3">
     <h1>Welcome to Footprint.</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    <p class="lead">Footprint is a basic activity tracker that records "green" activities. Earn credits with each sustainable activity recorded!</p>
     <p class="lead">
       <a href="/login" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Login</a>
       <a href="/signup" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Signup</a>
