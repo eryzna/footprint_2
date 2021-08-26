@@ -1,10 +1,88 @@
-<form class="" action="/login" method="post">
-    Username: <input type="text" name="username" value=""> <br>
-    <br>
-    Password: <input type="password" name="password" value=""> <br>
-    <br>
-    <input type="submit" name="submit" value="Log In">
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Footprint</title>
 
-</form>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
 
-<h4><a href="/signup">Not a User? Sign Up!</a> &nbsp;&nbsp; <a href="/"> Go Back</a></h4>
+    <link href="custom.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      body {
+        background: url(images/green_gradient.jpeg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Footprint</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end" style="padding-top: 2%">
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
+        <a class="nav-link" href="#">Latest</a>
+        <a class="nav-link" href="#">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="px-3">
+    <form class="" action="/login" method="post">
+        <h4 style="color:rgba(1, 77, 7, 0.5)">Username:</h4> <input type="text" name="username" value=""> <br>
+    <br>
+     <h4 style="color:rgba(1, 77, 7, 0.5)">Password:</h4><input type="password" name="password" value=""> <br>
+    <br>
+    <input class ="btn btn-lg btn-secondary fw-bold border-white" type="submit" name="submit" value="Log In">
+
+    </form>
+    <br>
+
+    <p><a href="/signup">Not a User? Sign Up!</a> &nbsp;&nbsp; <a href="/"> Go Back</a></p>
+  </main>
+
+  <footer class="mt-auto ">
+    <p> Built by Elana.</p>
+  </footer>
+</div>
+
+
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
