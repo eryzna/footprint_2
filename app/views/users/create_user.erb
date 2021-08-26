@@ -1,14 +1,90 @@
-<h1>Please Sign Up Below!</h1>
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Footprint</title>
 
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
+
+    <link href="custom.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      body {
+        background: url(images/green_gradient.jpeg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      h4 {
+        color: rgba(1, 77, 7, 0.5)
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Footprint</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end" style="padding-top: 2%">
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
+        <a class="nav-link" href="#">Latest</a>
+        <a class="nav-link" href="#">About</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="px-3">
+<!--<h1>Please Sign Up Below!</h1>-->
 <form class="" action="/signup" method="post">
-  Username: <input type="text" name="username" value="" required> <br>
+  <h4>Username:</h4><input type="text" name="username" value="" required> <br>
   <br>
-  Email: <input type="text" name="email" value="" required> <br>
+  <h4>Email:</h4><input type="text" name="email" value="" required> <br>
   <br>
-  Password: <input type="password" name="password" value=""required> <br>
+  <h4>Password:</h4> <input type="password" name="password" value=""required> <br>
   <br>
-  <input type="submit" name="submit" value="Sign Up!">
+  <input class="btn btn-lg btn-secondary fw-bold border-white" type="submit" name="submit" value="Sign Up!">
 
 </form>
+<br>
+<a href="/login"> or Log In</a> 
+</main>
 
-<a href="/login"> Log In</a> 
+
+
+
+  <footer class="mt-auto ">
+    <p> Built by Elana.</p>
+  </footer>
+</div>
+
+
+    
+  </body>
+</html>
+
+
