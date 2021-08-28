@@ -3,11 +3,56 @@
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <link href="/custom.css">
-
+<link href="cover.css" rel="stylesheet">
 </head>
 
-<body>
+<style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      body {
+        background: url(images/green_gradient.jpeg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+   
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Footprint</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
+        <a class="nav-link" href="#">Latest</a>
+        <a class="nav-link" href="#">About</a>
+      </nav>
+    </div>
+  </header>
+
+<body class="d-flex h-100 text-center text-white bg-dark">
 <%= yield %>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
+ <footer class="mt-auto ">
+    <p> Built by Elana.</p>
+  </footer>
 </body>
+
 </html>

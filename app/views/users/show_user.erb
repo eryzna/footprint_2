@@ -1,17 +1,18 @@
-<h1> Hello, <%= @user.username %>. Here Are Your Stats!</h1>
 
-<h3>Activities</h3>
-<% if @user.activities == [] %>
-  <p> No activities to show! </p>
-<% else %>
-  <% @user.activities.each do |a| %>
-    <li> <a href="/activities/<%=a.id%>"> <%= a.name.titleize %> </a></li>
+  
+  <h1> Hello, <%= @user.username %>. Here Are Your Stats!</h1>
+
+  <h3>Activities</h3>
+    <% if @user.activities == [] %>
+      <p> No activities to show! </p>
+    <% else %>
+      <% @user.activities.each do |a| %>
+      <li> <a href="/activities/<%=a.id%>"> <%= a.name.titleize %> </a></li>
+    <%end%>
   <%end%>
-<%end%>
 
+  <% a = @user.activities.map {|d| d.credits }%>
+  <h3>Your Balance </h3>
+  <%= a.inject(0){|sum,x| sum + x }%>
 
-<% a = @user.activities.map {|d| d.credits }%>
-<h3>Your Balance </h3>
-<%= a.inject(0){|sum,x| sum + x }%>
-
-<h4><a href="/activities/new">Add an Activity</a>&nbsp;&nbsp;<a href="/activities">Home</a>&nbsp;&nbsp;<a href="/logout"> Logout</a>
+  <h4><a href="/activities/new">Add an Activity</a>&nbsp;&nbsp;<a href="/activities">Home</a>&nbsp;&nbsp;<a href="/logout"> Logout</a>

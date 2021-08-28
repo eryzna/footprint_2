@@ -1,3 +1,19 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Footprint</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
+
+    <link href="custom.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+
+<main class="px-3">
 <h1> Hello <%=@current_user.username%>!</h1>
 
 <%if @activities==[]%>
@@ -10,3 +26,7 @@
 <%end%>
 
 <h4><a href="/activities/new"> Add an Activity</a> &nbsp;&nbsp; <a href="/users/<%=@current_user.slug%>"> Profile</a>&nbsp;&nbsp;  <a href="/logout"> Logout</a></h4>
+</main>
+
+
+</html>
