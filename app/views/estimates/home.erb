@@ -6,18 +6,24 @@
     <title>Footprint</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
-
-    
-    <link href="custom.css" rel="stylesheet">
-
-
-    <!-- Bootstrap core CSS -->
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-   <link href="cover.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="custom.css" rel="stylesheet"> 
+    <link href="cover.css" rel="stylesheet">
+    <script src="custom.js"></script>
    </head>
-   
+
 <main class="px-3">
-<form class="" action="/activities" method="post">
+<select class="form-select" aria-label="Default select example" id="estimate-select">
+  <option selected>Select Activity Type</option>
+  <option value="electricity">Electricity</option>
+  <option value="flight">Flight</option>
+  <option value="shipping">Shipping</option>
+  <option value="vehicle">Vehicle</option>
+  <option value="fuel combustion">Fuel Combustion</option>
+</select>
+</main>
+
+<!--<form class="" action="" method="post">
   <h4>Activity Name: <input type="text" name="name" value=""required> </br></h4>
   <h4>Type: </h4>
   <input type="radio" name="activity_type" id="commute" value="commute" required> <label for="commute"> Commute </label> </br>
@@ -27,5 +33,4 @@
 
   <h4>Length (Minutes or Units): <input type="text" name="length" value="" required></h4></br>
   <input type="submit" name="submit" value="Submit">
-</form>
-</main>
+</form>-->

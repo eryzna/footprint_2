@@ -5,6 +5,7 @@ class EstimatesController < ApplicationController
     end
     
     post '/estimates' do
+        binding.pry
     end
 
 end
