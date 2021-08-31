@@ -12,7 +12,7 @@ class ActivitiesController < ApplicationController
 
   get '/activities/new' do
     if logged_in?
-      erb :'activities/create_activity'
+      erb :'activities/create_activity' 
     else
       redirect to '/login'
     end

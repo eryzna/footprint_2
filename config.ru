@@ -6,3 +6,4 @@ use Rack::MethodOverride
 run ApplicationController
 use UsersController
 use ActivitiesController
+use EstimatesController

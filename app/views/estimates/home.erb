@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Footprint</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
+
+    
+    <link href="custom.css" rel="stylesheet">
+
+
+    <!-- Bootstrap core CSS -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="cover.css" rel="stylesheet">
+   </head>
+   
+<main class="px-3">
+<form class="" action="/activities" method="post">
+  <h4>Activity Name: <input type="text" name="name" value=""required> </br></h4>
+  <h4>Type: </h4>
+  <input type="radio" name="activity_type" id="commute" value="commute" required> <label for="commute"> Commute </label> </br>
+  <input type="radio" name="activity_type" id="food" value="food" required> <label for="food"> Food </label> </br>
+  <input type="radio" name="activity_type" id="home" value="home" required> <label for="home"> Home </label> </br>
+  <input type="radio" name="activity_type" id="outreach" value="outreach" required> <label for="outreach"> Outreach </label> </br>
+
+  <h4>Length (Minutes or Units): <input type="text" name="length" value="" required></h4></br>
+  <input type="submit" name="submit" value="Submit">
+</form>
+</main>
