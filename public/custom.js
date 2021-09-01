@@ -64,7 +64,7 @@ function addFuelForm (value) {
           credentials: 'same-origin', // include, *same-origin, omit
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer 8yJaluvezWwkupVnQ8Khg',
+            'Authorization': `Bearer ${apiKey}`,
             'Accept': 'application/json'
             // 'Content-Type': 'application/x-www-form-urlencoded',
           },
